@@ -7,7 +7,10 @@
 
 
 // merge sort
-  // 
+  // divide in half
+  // merge
+  // compare 0 indices
+  // push the lesser value & slice it out
 
 
 // heap sort
