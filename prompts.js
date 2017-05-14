@@ -7,10 +7,15 @@
 
 
 // merge sort
+  // recursive
+  // set base case
+
   // divide in half
-  // merge
-  // compare 0 indices
-  // push the lesser value & slice it out
+  // sort each half
+
+  // return merge of two halves
+    // consider all cases
+    // return array to mergeSort
 
 
 // heap sort
