@@ -1,3 +1,11 @@
+// stacks
+
+  // done with classes
+  // initiate with 2 values
+  // will use prototype to add new functionality
+  // use 1 value to help track the other
+
+
 // quick sort 
   // new arr
   // pivot
