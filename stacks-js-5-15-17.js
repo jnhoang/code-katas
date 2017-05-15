@@ -1,6 +1,12 @@
-var Stack = function () {
-  this.counter = 0;
-  this.storage = {};
+// var Stack = function () {
+//   this.counter = 0;
+//   this.storage = {};
+// }
+class Stack {
+  constructor() {
+    this.counter = 0;
+    this.storage = {};
+  }
 }
 
 Stack.prototype.push = function(num) {
@@ -26,7 +32,7 @@ Stack.prototype.isEmpty = function () {
   return this.counter === 0;
 }
 
-var stack1 = new Stack;
+var stack1 = new Stack();
 stack1.peek();
 stack1.push(1);
 stack1.push(3);

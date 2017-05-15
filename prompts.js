@@ -1,10 +1,14 @@
 // stacks
-
   // done with classes
   // initiate with 2 values
   // will use prototype to add new functionality
   // use 1 value to help track the other
 
+// queue
+  // done with classes
+  // initiate with 3 values
+  // will use prototypes to add new functionality
+  // use the fact of the additional value to implement functionality through a quirk
 
 // quick sort 
   // new arr
