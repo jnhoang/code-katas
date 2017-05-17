@@ -1,3 +1,20 @@
+
+
+// linked list
+  // linked list
+    // initiate with start and end
+    // add a node to front
+      // instantiate new node
+    // add to end
+    // delete from front
+    // delete from end
+    // print all
+    // get length
+
+
+  // node
+    // instantiates with data and next
+
 // stacks
   // done with classes
   // initiate with 2 values
