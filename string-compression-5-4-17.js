@@ -30,3 +30,29 @@ function stringCompression(str) {
 function assertEquals(testResult, expectedResult) {
   return testResult === expectedResult ? 'Test passed.' : 'Test failed.';
 }
+
+function strCompression(str) {
+  let output = '';
+  let temp = str[0]
+  let isSingle = true;
+  let count = 1;
+
+  for (let i = 1; i < str.length; i++) {
+    let current = str[i];
+
+    if (temp === current) {
+      count++;
+    }
+    else {
+      output += temp + count;
+      temp = current;
+      count = 1;
+    }
+  }
+  if (isSingle && count > 1) {
+    isSingle = false;
+  }
+  output += temp + count;
+
+  return isSingle ? str : output;
+}

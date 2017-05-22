@@ -10,5 +10,5 @@ function checkPalindrome(inputString) {
 }
 
 function assertEquals(testResult, expectedResult) {
-  console.log(testResult === expectedResult ? 'Test passed.' : 'Test failed.');
+  console.log(testResult === expectedResult);
 }
