@@ -50,7 +50,7 @@ function sortByName(animalArr) {
     animalObj[animalArr[i].numOfLegs].push(animalArr[i]) :
     animalObj[animalArr[i].numOfLegs] = [ animalArr[i] ]
   }
-  //console.log(animalObj)
+  console.log(animalObj)
   
   let nameSortedArr = [];
   for (key in animalObj) {
