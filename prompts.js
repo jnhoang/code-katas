@@ -35,7 +35,7 @@
     // console.log('test:', test); // 3
     // console.log('isempty?:', stack1.isEmpty()); // false
     // stack1.peek(); // 1
-    // console.log(stack1); // {'0': 1}
+    // console.log(stack1); // {'0': 1}, counter: 1
 // queue
   // done with classes
   // initiate with 3 values
