@@ -42,6 +42,22 @@
   // will use prototypes to add new functionality
   // use the fact of the additional value to implement functionality through a quirk
 
+// prompts
+//   var empty = 'queue is currently empty';
+//   var queue1 = new Queue();
+//   queue1.shift();  // 'queue is currently empty'
+//   queue1.peek();   // 'queue is currently empty'
+//   queue1.push(1);
+//   queue1.push(3);
+//   var test = queue1.shift();
+//   console.log('test:', test); // 1
+//   console.log('isempty?:', queue1.isEmpty()); // false
+//   queue1.peek(); // 1
+//   console.log(queue1); // {'0': 1}, counter: 1
+
+
+
+
 // quick sort 
   // new arr
   // pivot
