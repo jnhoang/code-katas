@@ -36,13 +36,16 @@
     // console.log('isempty?:', stack1.isEmpty()); // false
     // stack1.peek(); // 1
     // console.log(stack1); // {'0': 1}, counter: 1
+
+
+
 // queue
   // done with classes
   // initiate with 3 values
   // will use prototypes to add new functionality
   // use the fact of the additional value to implement functionality through a quirk
 
-// prompts
+// TEST VALUES
 //   var empty = 'queue is currently empty';
 //   var queue1 = new Queue();
 //   queue1.shift();  // 'queue is currently empty'
