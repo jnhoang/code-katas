@@ -7,23 +7,19 @@
 class Queue {
   constructor() {
     this.storage  = {};
-    this.start    = null;
+    this.start    = 0;
     this.counter  = 0;
   }
   isEmpty() {
-    return this.counter <= 0;
+    return this.counter === this.start;
   }
-  push(data) {
+  enqueue(data) {
     this.storage[this.counter] = data;
-
-    if (this.isEmpty()) {
-      this.start = this.counter;
-    }
 
     this.counter += 1;
     console.log(data, 'pushed to storage');
   }
-  shift() {
+  dequeue() {
     if (this.isEmpty()) {
       return console.log(empty);
     }
@@ -32,10 +28,7 @@ class Queue {
     console.log('val: ', val);
     let oldStart  = this.start;
     
-    if (this.storage[this.start + 1]) {
-      let next    = this.start += 1;
-      this.start  = next;
-    }
+    this.start  = this.start + 1;
 
     delete(this.storage[oldStart]);
     return val;
@@ -50,11 +43,11 @@ class Queue {
 
 var empty = 'queue is currently empty';
 var queue1 = new Queue();
-queue1.shift();  // 'queue is currently empty'
+queue1.dequeue();  // 'queue is currently empty'
 queue1.peek();   // 'queue is currently empty'
-queue1.push(1);
-queue1.push(3);
-var test = queue1.shift();
+queue1.enqueue(1);
+queue1.enqueue(3);
+var test = queue1.dequeue();
 console.log('test:', test); // 1
 console.log('isempty?:', queue1.isEmpty()); // false
 queue1.peek(); // 1
