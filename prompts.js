@@ -48,18 +48,31 @@
 // TEST VALUES
   // var empty = 'queue is currently empty';
   // var queue1 = new Queue();
-  // queue1.dequeue();  // 'queue is currently empty'
-  // queue1.peek();   // 'queue is currently empty'
-  // queue1.enqueue(1);
-  // queue1.enqueue(3);
+  // queue1.dequeue();                               // 'queue is currently empty'
+  // queue1.enqueue(1);                              // 'enqueued 1'
+  // queue1.enqueue(3);                              // 'enqueued 3'
   // var test = queue1.dequeue();
-  // console.log('test:', test); // 1
-  // console.log('isempty?:', queue1.isEmpty()); // false
-  // queue1.peek(); // 3
-  // console.log(queue1); // {'1': 3}, start: 1, counter: 2
-  // console.log(queue1.dequeue());
+  // console.log('test:', test);                     // 1
+  // console.log('isempty?:', queue1.isEmpty());     // false
+  // console.log(queue1);                            // {'1': 3}, start: 1, counter: 2
+  // console.log(queue1.dequeue());                  // 3
   // console.log('queue empty?:', queue1.isEmpty()); // true
-  // console.log(queue1); // empty
+  // console.log(queue1);                            // empty
+
+
+// BFS
+
+// TEST VALUES
+// const seven   = new Node(7  , []);
+// const six     = new Node(6  , []);
+// const four    = new Node(4  , []);
+// const five    = new Node(5  , []);
+// const three   = new Node(3  , [six  , seven] );
+// const two     = new Node(2  , [four , five]  );
+// const start   = new Node(1  , [two  , three] );
+
+// //console.log(start);
+// console.log('visited: ', bfs(start));
 
 
 

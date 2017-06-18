@@ -25,10 +25,9 @@ class Queue {
     }
 
     let val       = this.storage[this.start];
-    console.log('val: ', val);
     let oldStart  = this.start;
-    
-    this.start  = this.start + 1;
+    this.start    = this.start + 1;
+    console.log('val: ', val);
 
     delete(this.storage[oldStart]);
     return val;
