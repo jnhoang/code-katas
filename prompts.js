@@ -46,17 +46,20 @@
   // use the fact of the additional value to implement functionality through a quirk
 
 // TEST VALUES
-//   var empty = 'queue is currently empty';
-//   var queue1 = new Queue();
-//   queue1.shift();  // 'queue is currently empty'
-//   queue1.peek();   // 'queue is currently empty'
-//   queue1.push(1);
-//   queue1.push(3);
-//   var test = queue1.shift();
-//   console.log('test:', test); // 1
-//   console.log('isempty?:', queue1.isEmpty()); // false
-//   queue1.peek(); // 1
-//   console.log(queue1); // {'0': 1}, counter: 1
+  // var empty = 'queue is currently empty';
+  // var queue1 = new Queue();
+  // queue1.dequeue();  // 'queue is currently empty'
+  // queue1.peek();   // 'queue is currently empty'
+  // queue1.enqueue(1);
+  // queue1.enqueue(3);
+  // var test = queue1.dequeue();
+  // console.log('test:', test); // 1
+  // console.log('isempty?:', queue1.isEmpty()); // false
+  // queue1.peek(); // 3
+  // console.log(queue1); // {'1': 3}, start: 1, counter: 2
+  // console.log(queue1.dequeue());
+  // console.log('queue empty?:', queue1.isEmpty()); // true
+  // console.log(queue1); // empty
 
 
 

@@ -51,4 +51,7 @@ var test = queue1.dequeue();
 console.log('test:', test); // 1
 console.log('isempty?:', queue1.isEmpty()); // false
 queue1.peek(); // 1
-console.log(queue1); // {'0': 1}, counter: 1
+console.log(queue1); // {'1': 3}, counter: 2
+console.log(queue1.dequeue());
+console.log('queue empty?:', queue1.isEmpty());
+console.log(queue1)
