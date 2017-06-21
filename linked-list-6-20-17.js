@@ -23,7 +23,9 @@ class LinkedList {
   isEmpty() {
     return this.start === null;
   }
-  addAtStart(node) {
+  addAtStart(data) {
+    let node = new Node(data);
+
     if (this.isEmpty()) {
       this.start  = node;
       this.end    = node;
@@ -35,7 +37,9 @@ class LinkedList {
     this.start  = node;
     node.next   = temp;
   }
-  addAtEnd(node) {
+  addAtEnd(data) {
+    let node = new Node(data);
+
     if (this.isEmpty()) {
       this.start  = node;
       this.end    = node;
@@ -74,6 +78,26 @@ class LinkedList {
     this.end      = current;
     current.next  = null;
   }
+  deleteAtNode(node) {
+    if (this.isEmpty()) {
+      return console.log('deleteAtNode: Empty List');
+    }
+    if (this.start.data == node && this.start.next === null) {
+      this.start  = null;
+      this.end    = null;
+    }
+
+    let current = this.start;
+
+    while (current.next.data !== node) {
+      current = current.next;
+    }
+
+    let nodeToDelete    = current.next;
+
+    current.next        = nodeToDelete.next;
+    nodeToDelete.next   = null;
+  }
   printList() {
     if (this.isEmpty()) {
       return console.log('print: Empty List');
@@ -92,23 +116,20 @@ class LinkedList {
   }
 }
 
-const node1 = new Node(1)
-,     node2 = new Node(2)
-,     node3 = new Node(3)
-,     node4 = new Node(5)
-,     node5 = new Node(4);
-
 const list = new LinkedList;
 list.deleteAtStart();          // empty
 list.deleteAtEnd();            // empty
-list.addAtStart(node1);
-list.addAtStart(node2);
+list.addAtStart(1);
+list.addAtStart(2);
 console.log(list);             // start: 2, end: 1
-list.addAtEnd(node3);
+list.addAtEnd(3);
 console.log(list);             // end: 3
-list.addAtEnd(node4);
-list.addAtEnd(node5);
+list.addAtEnd(4);
+list.addAtEnd(5);
+list.addAtEnd(6);
 list.deleteAtStart();
 list.deleteAtEnd();
-console.log(list);             // start: 1, end: 5
-console.log(list.printList()); // [1, 3, 5]
+console.log(list);             // start: 1, end: 4
+console.log(list.printList() + ' // [1, 3, 5, 4]');
+list.deleteAtNode(5);
+console.log(list.printList() + ' // [1, 3, 4]');
