@@ -23,7 +23,6 @@ class Queue {
   }
 }
 
-var empty = 'queue is currently empty';
 var queue1 = new Queue();
 queue1.dequeue();  // 'queue is currently empty'
 queue1.enqueue(1);
