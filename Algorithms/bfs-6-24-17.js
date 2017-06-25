@@ -23,6 +23,16 @@ class Queue {
   }
 }
 
+class Node {
+  constructor(val, children) {
+    this.val        = val;
+    this.children   = children;
+    this.isVisited  = false;
+  }
+}
+
+// TEST VALUES
+
 // var queue1 = new Queue();
 // queue1.dequeue();  // 'queue is currently empty'
 // queue1.enqueue(1);
@@ -34,23 +44,13 @@ class Queue {
 // console.log(queue1.dequeue()); // 3
 // console.log('queue empty?:', queue1.isEmpty()); // true
 // console.log(queue1); // { empty }, start: 2, counter 2
-
-class Node {
-  constructor(val, children) {
-    this.val        = val;
-    this.children   = children;
-    this.isVisited  = false;
-  }
-}
-
-// TEST VALUES
-const seven   = new Node(7  , []);
-const six     = new Node(6  , []);
-const four    = new Node(4  , []);
-const five    = new Node(5  , []);
-const three   = new Node(3  , [six  , seven] );
-const two     = new Node(2  , [four , five]  );
-const start   = new Node(1  , [two  , three] );
+const seven   = new Node(7  , [])
+,     six     = new Node(6  , [])
+,     four    = new Node(4  , [])
+,     five    = new Node(5  , [])
+,     three   = new Node(3  , [six  , seven] )
+,     two     = new Node(2  , [four , five]  )
+,     start   = new Node(1  , [two  , three] );
 
 //console.log(start);
 console.log('visited: ', bfs(start));
