@@ -39,7 +39,7 @@ console.log(queue1); // { empty }, start: 2, counter 2
 class Node {
   constructor(data, children) {
     this.data       = data;
-    this.children   = children;
+    this.children   = children || [];
     this.visited    = false;
   }
 }
@@ -63,7 +63,9 @@ function bfs (node) {
 
   while(!queue.isEmpty()) {
     let current = queue.dequeue();
+    // in case of graph, add check for isVisited
     current.children.forEach( (child) => queue.enqueue(child) );
+    current.visited = true;
     visitedArr.push(current.data);
   }
 

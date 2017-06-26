@@ -78,9 +78,9 @@ class LinkedList {
     this.end      = current;
     current.next  = null;
   }
-  deleteAtNode(node) {
+  deleteValAt(node) {
     if (this.isEmpty()) {
-      return console.log('deleteAtNode: Empty List');
+      return console.log('deleteValAt: Empty List');
     }
     if (this.start.data == node && this.start.next === null) {
       this.start  = null;
@@ -98,6 +98,7 @@ class LinkedList {
     current.next        = nodeToDelete.next;
     nodeToDelete.next   = null;
   }
+  deleteIndexAt
   printList() {
     if (this.isEmpty()) {
       return console.log('print: Empty List');
@@ -129,7 +130,7 @@ list.addAtEnd(5);
 list.addAtEnd(6);
 list.deleteAtStart();
 list.deleteAtEnd();
-console.log(list);             // start: 1, end: 4
-console.log(list.printList() + ' // [1, 3, 5, 4]');
-list.deleteAtNode(5);
+console.log(list);             // start: 1, end: 5      // CHECK THIS
+console.log(list.printList() + ' // [1, 3, 4, 5]');
+list.deleteValAt(3);
 console.log(list.printList() + ' // [1, 3, 4]');
