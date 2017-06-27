@@ -13,9 +13,8 @@ testArr.forEach( test => console.log(test + ' : ' + isUnique(test)) );
 
 // with hash table data structure
 function isUnique(str) {
-  let storage = {};
-
-  str = str.split('');
+  let storage   = {};
+  str           = str.split('');
 
   for (let i = 0; i < str.length; i++) {
     if (storage[str[i]]) {
@@ -23,14 +22,7 @@ function isUnique(str) {
     }
     storage[str[i]] = 1;
   }
-  
 
-  // for (letter in storage) {
-  //   if (storage[letter] > 1) {
-  //     return false;
-  //   }
-  // }
-  //console.log(storage);
   return true;
 }
 
