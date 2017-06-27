@@ -9,30 +9,32 @@ const testArr = [
 , 'food'
 ];
 
-// testArr.forEach( test => console.log(test + ' : ' + isUnique(test)) );
+testArr.forEach( test => console.log(test + ' : ' + isUnique(test)) );
 
 // with hash table data structure
 function isUnique(str) {
   let storage = {};
 
-  str
-  .split('')
-  .forEach( (ltr) => {
-    storage[ltr]
-    ? storage[ltr] += 1
-    : storage[ltr]  = 1;
-  });
+  str = str.split('');
 
-  for (letter in storage) {
-    if (storage[letter] > 1) {
+  for (let i = 0; i < str.length; i++) {
+    if (storage[str[i]]) {
       return false;
     }
+    storage[str[i]] = 1;
   }
+  
 
+  // for (letter in storage) {
+  //   if (storage[letter] > 1) {
+  //     return false;
+  //   }
+  // }
+  //console.log(storage);
   return true;
 }
 
-testArr.forEach( test => console.log(test + ' : ' + isUnique2(test)) );
+// testArr.forEach( test => console.log(test + ' : ' + isUnique2(test)) );
 
 function isUnique2(str) {
   for (let i = 0; i < str.length; i++) {
@@ -43,3 +45,18 @@ function isUnique2(str) {
 
   return true;
 }
+
+// testArr.forEach( test => console.log(test + ' : ' + isUnique3(test)) );
+
+function isUnique3(str) {
+  str = str.split('').sort();
+
+  for (let i = 0; i < str.length - 1; i++) {
+    if (str[i] === str[i + 1]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
