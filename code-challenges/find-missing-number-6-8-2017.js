@@ -13,12 +13,10 @@ function findMissingNumber(arr) {
   var g       = Math.floor(max + min / 2);
   
   while (max - min > 1) {
-    if (arr[g] === g + 1) {
-      min = g;
-    } 
-    else {
-      max = g;
-    }
+    arr[g] === g + 1 
+    ? min = g 
+    : max = g;
+    
     g = (max + min) / 2;
   }
   return console.log((arr[min] + arr[max]) / 2);

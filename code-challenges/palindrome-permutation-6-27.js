@@ -17,10 +17,10 @@ function palindromePermutation(str) {
   let oddsCtr = 0;
 
   str
+  .toLowerCase()
   .split('')
   .filter(  (letter) => letter !== ' ')
   .forEach( (letter) => {
-    letter = letter.toLowerCase();
     
     storage[letter] 
     ? storage[letter] += 1
@@ -30,7 +30,7 @@ function palindromePermutation(str) {
   for (let letter in storage) {
     storage[letter] % 2 == 0 ? null : oddsCtr++;
   }
-  return oddsCtr === 1;
+  return oddsCtr <= 1;
 }
 
 

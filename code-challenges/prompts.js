@@ -110,8 +110,3 @@ console.log('visited: ', bfs(start));
 
 
 // binary search trees
-
-// queues
-
-// stacks
-
