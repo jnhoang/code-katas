@@ -7,8 +7,7 @@ const testArr = [
 ]
 
 testArr.forEach( test => console.log('mergesort: ' + mergeSort(test)) );
-// testArr.forEach( test => console.log('quicksort: ' + quickSort(test)) );
-// testArr.forEach( test => console.log('mergesort: ' + mergeSort(test)) );
+testArr.forEach( test => console.log('quicksort: ' + quickSort(test)) );
 
 function mergeSort(arr) {
   if (arr.length <= 1) {
