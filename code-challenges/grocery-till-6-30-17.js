@@ -7,31 +7,49 @@ var registers  = 3;
 
 console.log(findTime(queue, registers));
 
+
 function findTime(queue, n) {
-	storage = {};
+	storage = [];
 
 	for (let i = 0; i < n; i++) {
 		storage[i] = 0;
 	}
-	
-	while (queue.length) {
-    let next      = queue.shift();
-    let shortest  = "0";
+
+	while(queue.length) {
+		let next = queue.shift();
 		
-		for (let arr in storage) {
-			if (storage[shortest] > storage[arr]) {
-				shortest = arr;
-			}
-		}
-		storage[shortest] += next;
+		storage = storage.sort( (a, b) => a - b );
+		storage[0] += next;
 	}
 
-	let longest = "0";
-
-	for (let arr in storage) {
-		if (storage[longest] < storage[arr]) {
-			longest = arr;
-		}
-	}
-	return longest;
+	return storage.sort( (a, b) => b - a )[0];
 }
+
+// function findTime(queue, n) {
+// 	storage = {};
+
+// 	for (let i = 0; i < n; i++) {
+// 		storage[i] = 0;
+// 	}
+	
+// 	while (queue.length) {
+//     let next      = queue.shift();
+//     let shortest  = "0";
+		
+// 		for (let arr in storage) {
+// 			if (storage[shortest] > storage[arr]) {
+// 				shortest = arr;
+// 			}
+// 		}
+// 		storage[shortest] += next;
+// 	}
+
+// 	let longest = "0";
+
+// 	for (let arr in storage) {
+// 		if (storage[longest] < storage[arr]) {
+// 			longest = arr;
+// 		}
+// 	}
+// 	return longest;
+// }
