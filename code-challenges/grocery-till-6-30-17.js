@@ -7,7 +7,6 @@ var registers  = 3;
 
 console.log(findTime(queue, registers));
 
-
 function findTime(queue, n) {
 	storage = [];
 
