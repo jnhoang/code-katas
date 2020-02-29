@@ -8,13 +8,23 @@
     3. iteratively
 """
 
-def fibonacci():
-  pass
+def fibonacci(index):
+
+  # naive solution
+  if index == 0:
+    print('no thanks')
+  elif index == 1 or index == 2:
+    return 1
+  else:
+    return fibonacci(index - 1) + fibonacci(index - 2)
+
+
+
 
 if __name__ == '__main__':
   expected = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610,
  987, 1597, 2584, 4181, 6765]
-  result = [ fibonacci(i) for i in range(1, 20) ]
+  result = [ fibonacci(i) for i in range(1, 20 + 1) ]
   # uncomment this one after memoized solution is done
   # result = [ fibonacci(i) for i in range(1, 100) ]
   print('results     : ', result)
