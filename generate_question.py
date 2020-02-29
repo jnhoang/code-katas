@@ -2,20 +2,18 @@ from helper import Helper
 HELPER = Helper()
 
 def main():
-  question_types = ['bfs', 'dfs', 'queue', 'stack', 'linked-list', 'bst']
-  question_type = '''
-  what type of question file do you want generated? Enter a number
-    1. bfs
-    2. dfs
-    3. implement a queue
-    4. implement a stack
-    5. implement a linked-list
-    6. binary search tree
-  '''
-  response         =  int(input(question_type)) - 1
-  question_type    =  question_types[response]
-  question_details =  HELPER.get_question(question_type)
+  # generate prompt and ask user for a file to create
+  question_types  =  [ title for title in HELPER.config ]
+  question_prompt =  'What type of question file do you want generated? Enter a number:'
+  for i, option in enumerate(question_types) :
+    question_prompt +=  f'\n  {i + 1}: {option}'
 
+  # process request
+  response         =  int(input(question_prompt)) - 1
+  option           =  question_types[response]
+  question_details =  HELPER.get_question(option)
+
+  # generate file
   with open(question_details['skeleton'], 'r') as input_file:
     lines = input_file.readlines()
   with open(f'algorithms-2.0/{question_details["title"]}-{HELPER.get_date()}.py', 'w') as output_file:

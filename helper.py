@@ -29,6 +29,10 @@ class Helper():
         'title'    :  'bst',
         'skeleton' :  f'{self.skeleton_folder}/bst_skeleton.py',
       },
+      'fibonacci' : {
+        'title'    :  'fibonacci',
+        'skeleton' :  f'{self.skeleton_folder}/fibonacci_skeleton.py',
+      },
     }
 
 
