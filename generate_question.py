@@ -7,6 +7,7 @@ def main():
   question_prompt =  'What type of question file do you want generated? Enter a number:'
   for i, option in enumerate(question_types) :
     question_prompt +=  f'\n  {i + 1}: {option}'
+  question_promt  += '\n\n'
 
   # process request
   response         =  int(input(question_prompt)) - 1

@@ -25,9 +25,9 @@ class Helper():
         'title'    :  'linked_list',
         'skeleton' :  f'{self.skeleton_folder}/linked_list_skeleton.py',
       },
-      'bst' : {
-        'title'    :  'bst',
-        'skeleton' :  f'{self.skeleton_folder}/bst_skeleton.py',
+      'binary_search' : {
+        'title'    :  'binary_search',
+        'skeleton' :  f'{self.skeleton_folder}/binary_search_skeleton.py',
       },
       'fibonacci' : {
         'title'    :  'fibonacci',
