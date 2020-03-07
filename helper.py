@@ -6,32 +6,28 @@ class Helper():
     self.skeleton_folder = 'skeleton_files'
     self.config = {
       'bfs' : {
-        'title'    :  'bfs',
-        'skeleton' :  f'{self.skeleton_folder}/bfs_skeleton.py',
+        'skeleton' :  f'{self.skeleton_folder}/%s_skeleton.py',
       },
       'dfs' : {
-        'title'    :  'dfs',
-        'skeleton' :  f'{self.skeleton_folder}/dfs_skeleton.py',
+        'skeleton' :  f'{self.skeleton_folder}/%s_skeleton.py',
       },
       'queue' : {
-        'title'    :  'queue',
-        'skeleton' :  f'{self.skeleton_folder}/queue_skeleton.py',
+        'skeleton' :  f'{self.skeleton_folder}/%s_skeleton.py',
       },
       'stack' : {
-        'title'    :  'stack',
-        'skeleton' :  f'{self.skeleton_folder}/stack_skeleton.py',
+        'skeleton' :  f'{self.skeleton_folder}/%s_skeleton.py',
       },
       'linked_list' : {
-        'title'    :  'linked_list',
-        'skeleton' :  f'{self.skeleton_folder}/linked_list_skeleton.py',
+        'skeleton' :  f'{self.skeleton_folder}/%s_skeleton.py',
       },
       'binary_search' : {
-        'title'    :  'binary_search',
-        'skeleton' :  f'{self.skeleton_folder}/binary_search_skeleton.py',
+        'skeleton' :  f'{self.skeleton_folder}/%s_skeleton.py',
       },
       'fibonacci' : {
-        'title'    :  'fibonacci',
-        'skeleton' :  f'{self.skeleton_folder}/fibonacci_skeleton.py',
+        'skeleton' :  f'{self.skeleton_folder}/%s_skeleton.py',
+      },
+      'pre_sorted_two_sum' : {
+        'skeleton' :  f'{self.skeleton_folder}/%s_skeleton.py',
       },
     }
 
