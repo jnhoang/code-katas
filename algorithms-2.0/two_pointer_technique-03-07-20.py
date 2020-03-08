@@ -1,4 +1,4 @@
-from test_cases import test_cases
+from test_cases import two_pointer_technique
 """
   Given an array nums and a value val, remove all instances of that value in-place and return the new length.
   Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
@@ -32,9 +32,7 @@ def remove_element(array, target):
 
 
 if __name__ == '__main__':
-  cases = test_cases.get('two_pointer_technique')
-
-  for case in cases:
+  for case in two_pointer_technique:
     print('\nexpected: ', case.get('assert_result'))
     print('result  : ', remove_element(case['param_1'], case['param_2']))
 

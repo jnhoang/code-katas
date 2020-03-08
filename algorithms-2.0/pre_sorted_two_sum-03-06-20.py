@@ -1,4 +1,4 @@
-from test_cases import test_cases
+from test_cases import pre_sorted_two_sum
 """
 From: https://leetcode.com/explore/learn/card/array-and-string/205/array-two-pointer-technique/1153/
 Given an array of integers that is already sorted in ascending order,
@@ -29,8 +29,6 @@ def two_sum(nums_list, target):
 
 
 if __name__ == '__main__':
-  cases = test_cases.get('two_sum')
-
-  for case in cases:
+  for case in pre_sorted_two_sum:
     print('\nexpected: ', case.get('assert_result'))
     print('result  : ', two_sum(case['param_1'], case['param_2']))
