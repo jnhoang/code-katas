@@ -29,6 +29,9 @@ class Helper():
       'pre_sorted_two_sum' : {
         'skeleton' :  f'{self.skeleton_folder}/%s_skeleton.py',
       },
+      'two_pointer_technique' : {
+        'skeleton' :  f'{self.skeleton_folder}/%s_skeleton.py',
+      },
     }
 
 
