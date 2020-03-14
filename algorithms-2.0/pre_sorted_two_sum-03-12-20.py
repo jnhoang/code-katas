@@ -18,7 +18,20 @@ Example:
 """
 
 def two_sum(nums_list, target):
-  pass
+
+  # generate hash_map as we go along {value: index of that}
+  hash_map = {}
+
+  # loop through nums_list, look at a num
+  for i, num in enumerate(nums_list):
+    desired_num = target - num
+    # does target - num exist in the hash map?
+    # return the two indexes
+    if hash_map.get(desired_num) != None:
+      return [hash_map[desired_num] + 1, i + 1]
+    else:
+      hash_map[num] = i
+  # otherwise add the num as a key in the hashmap and enter its index as the value
 
 
 if __name__ == '__main__':
