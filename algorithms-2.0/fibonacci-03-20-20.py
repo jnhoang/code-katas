@@ -8,8 +8,14 @@
     3. iteratively
 """
 
-def fibonacci(index):
-  pass
+def fibonacci(index, cache={}):
+  if index == 1 or index == 2:
+    return 1
+  elif cache.get(index):
+    return cache[index]
+  else:
+    cache[index] = fibonacci(index - 1, cache) + fibonacci(index - 2, cache)
+    return val
 
 if __name__ == '__main__':
   expected = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610,

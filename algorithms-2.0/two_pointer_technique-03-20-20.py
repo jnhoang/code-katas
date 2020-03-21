@@ -16,8 +16,26 @@ from test_cases import two_pointer_technique
   It doesn't matter what values are set beyond the returned length.
 """
 
+# loop  counter_start   array_start  counter_end     array_end
+# 0       0             [3, 2, 2, 3]    0           [3, 2, 2, 3]
+# 1       0             [3, 2, 2, 3]    1           [2, 2, 2, 3]
+# 2       1             [2, 2, 2, 3]    2           [2, 2, 2, 3]
+# 3       2             [2, 2, 2, 3]    2           [2, 2, 2, 3]
+# returns counter # 2
+
 def remove_element(array, target):
-  pass
+  counter = 0
+
+  for i, num in enumerate(array):
+    if num == target:
+      continue
+    else:
+      array[counter] = num
+      counter += 1
+
+  return counter
+
+
 
 
 if __name__ == '__main__':

@@ -1,39 +1,15 @@
 import time
+from os import listdir
 from datetime import datetime
 
 class Helper():
   def __init__(self):
     self.skeleton_folder = 'skeleton_files'
     self.config = {
-      'bfs' : {
-        'skeleton' :  f'{self.skeleton_folder}/%s_skeleton.py',
-      },
-      'dfs' : {
-        'skeleton' :  f'{self.skeleton_folder}/%s_skeleton.py',
-      },
-      'queue' : {
-        'skeleton' :  f'{self.skeleton_folder}/%s_skeleton.py',
-      },
-      'stack' : {
-        'skeleton' :  f'{self.skeleton_folder}/%s_skeleton.py',
-      },
-      'linked_list' : {
-        'skeleton' :  f'{self.skeleton_folder}/%s_skeleton.py',
-      },
-      'binary_search' : {
-        'skeleton' :  f'{self.skeleton_folder}/%s_skeleton.py',
-      },
-      'fibonacci' : {
-        'skeleton' :  f'{self.skeleton_folder}/%s_skeleton.py',
-      },
-      'pre_sorted_two_sum' : {
-        'skeleton' :  f'{self.skeleton_folder}/%s_skeleton.py',
-      },
-      'two_pointer_technique' : {
-        'skeleton' :  f'{self.skeleton_folder}/%s_skeleton.py',
-      },
+      file.split('_skeleton')[0]: f'skeleton_files/{file}'
+      for file in listdir('./skeleton_files')
+      if file.endswith('.py')
     }
-
 
   def get_date(self):
     ''' returns todays date '''
@@ -50,28 +26,43 @@ class Helper():
     return
 
 
-def get_queue_skeleton():
-  return '''
+class Node:
+  def __init__(self, val=None, left=None, right=None):
+    self.val   =  val
+    self.left  =  left
+    self.right =  right
 
-"""
-  implement a queue class with the following methods:
-  [push, shift, peek, is_empty]
-"""
-class Queue():
-  def __init__(self):
+class BinaryTree:
+  # source: https://stackoverflow.com/questions/2598437/how-to-implement-a-binary-tree
+  def __init__(tree_vals=None):
+    self.root = self.generate_binary_tree(tree_vals)
+
+  def generate_binary_tree(self, tree_vals):
+    tree = Node()
+
+    for node in tree_vals:
+
+      print('tree: ', tree.__dict__)
+
+    return tree
+
+  def getRoot(self):
     pass
 
-  def push(self):
+  def add(self, val):
     pass
 
-  def shift(self):
+  def find(self, val):
     pass
 
-  def peek(self):
+  def deleteTree(self):
     pass
 
-  def is_empty(self):
+  def printTree(self):
     pass
 
 if __name__ == '__main__':
-  queue = Queue()'''
+  helper = Helper()
+
+  # foo = helper.generate_binary_tree([1, 2, 3, None, 4, 5])
+  # print(foo)

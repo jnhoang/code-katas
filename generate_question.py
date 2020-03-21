@@ -12,17 +12,19 @@ def main():
   question_prompt  += '\n\n'
 
   # process request
-  response         =  int(input(question_prompt)) - 1
-  requested_choice =  question_types[response]
-  question_details =  HELPER.get_question(requested_choice)
+  response          =  int(input(question_prompt)) - 1
+  requested_choice  =  question_types[response]
+  skeleton_filename =  HELPER.get_question(requested_choice)
 
   # generate file
-  with open(question_details['skeleton'] % requested_choice, 'r') as input_file:
+  with open(skeleton_filename, 'r') as input_file:
     lines = input_file.readlines()
-  with open(f'algorithms-2.0/%s-{HELPER.get_date()}.py' %  requested_choice, 'w') as output_file:
+
+  new_filename = f'algorithms-2.0/%s-{HELPER.get_date()}.py' %  requested_choice
+  with open(new_filename, 'w') as output_file:
     output_file.writelines(lines)
 
-  print('file generated')
+  print(f'{new_filename} generated: ')
 
 if __name__ == '__main__':
   main()
